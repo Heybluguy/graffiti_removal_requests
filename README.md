@@ -1,7 +1,18 @@
 # README
 
+## Launch
 
-# Challange (RoR):
+To launch, run the following commands in your terminal:
+
+```
+git clone https://github.com/Heybluguy/graffiti_removal_requests.git
+bundle
+rails db:create
+rails db:migrate
+rails s
+```
+
+# Challenge (RoR):
 
 Residents of Chicago can request graffiti removal through 311. Your task is to build a tool for reporting on graffiti removal requests by ward and month. Your tool should interact with the City of Chicago’s data API to retrieve the information needed.
 
