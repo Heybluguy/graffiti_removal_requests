@@ -1,11 +1,17 @@
 # README
 
+## Prerequisites
+ Ruby version 2.5.1
+
+ Rails version 5.2.1
+
 ## Launch
 
 To launch, run the following commands in your terminal:
 
 ```
 git clone https://github.com/Heybluguy/graffiti_removal_requests.git
+cd graffiti_removal_requests
 bundle
 rails db:create
 rails db:migrate
