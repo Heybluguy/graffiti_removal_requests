@@ -7,7 +7,9 @@
 
 ## Launch
 
-To launch, run the following commands in your terminal:
+Heroku Link: [graffiti_removal_requests](https://ancient-tundra-49158.herokuapp.com/)
+
+To launch locally, run the following commands in your terminal:
 
 ```
 git clone https://github.com/Heybluguy/graffiti_removal_requests.git
