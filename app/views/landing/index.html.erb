@@ -1,0 +1,22 @@
+
+
+<div class="header-container-wrapper">
+  <div class="home-link">
+    <%= link_to "Home", root_path %>
+  </div>
+  <h3> Graffiti Removal Service Requests </h3>
+</div>
+<div class="form-wrapper">
+  <h3>Enter in an Alderman's last name along with month and year below to view their graffiti report information.</h3>
+  <div class="form-container">
+    <%= form_tag("/search", method: "get") do %>
+      <h3>Alderman Last Name: </h3>
+      <%= text_field_tag(:q, nil, placeholder: "last name", required: true, class: 'input__search-bar alderman') %>
+
+      <h3>Month and Year: </h3>
+      <%= select_month Date.today %>
+      <%= select_year Date.today, start_year: 50.years.ago.year, end_year: Date.today.year %>
+  </div>
+</div>
+    <%= submit_tag("Search", class: 'button__search-bar') %>
+  <% end %>
