@@ -15,8 +15,8 @@
 
 .form-container, .results-container {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   background-color: rgba(238, 237, 237, 0.637);
   width: 400px;
   height: 250px;
@@ -24,14 +24,15 @@
   padding: 14px 20px;
 }
 
-.header-container-wrapper {
+.header-container-wrapper, .home-link a{
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0);
   width: 30%;
-  height: 100px;
   color: rgb(0, 0, 0);
   font-family: 'Trebuchet MS', sans-serif;
+  text-decoration: none;
 }
 
 input[type=text], select {
@@ -43,18 +44,29 @@ input[type=text], select {
   cursor: pointer;
 }
 
-input[type=submit] {
+input[type=submit], .home-link {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 10%;
   background-color:rgb(217, 78, 65);
-  color: rgb(225, 225, 255);
+  color: rgb(212, 212, 212);
   padding: 14px 20px;
   margin: 28px 0;
   border: none;
   border-radius: 50px;
   cursor: pointer;
+}
+
+input[type=submit]:hover, .home-link:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  color: rgb(212, 212, 212);
+}
+
+input[type=submit], .home-link {
+  --color: rgb(212, 212, 212);
+  --hover: rgb(24, 9, 7);
 }
 
 body {
