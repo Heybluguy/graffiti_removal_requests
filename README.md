@@ -7,12 +7,12 @@
 
 ## Launch
 
-Heroku Link: [graffiti_removal_requests](https://ancient-tundra-49158.herokuapp.com/)
+Heroku Link: [graffiti_removal_requests](https://graffitireporter.herokuapp.com/)
 
 To launch locally, run the following commands in your terminal:
 
 ```
-git clone https://github.com/Heybluguy/graffiti_removal_requests.git
+git clone https://github.com/Heybluguy/graffiti_reporter.git
 cd graffiti_removal_requests
 bundle
 rails db:create
@@ -21,7 +21,7 @@ rails s
 ```
 Open your browser and visit `localhost:3000` and interact with the interface.
 
-# Graffiti Removal Requests:
+# Graffiti Reporter:
 
 Residents of Chicago can request graffiti removal through 311. Your task is to build a tool for reporting on graffiti removal requests by ward and month. Your tool should interact with the City of Chicago’s data API to retrieve the information needed.
 
