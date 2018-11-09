@@ -13,7 +13,7 @@ To launch locally, run the following commands in your terminal:
 
 ```
 git clone https://github.com/Heybluguy/graffiti_reporter.git
-cd graffiti_removal_requests
+cd graffiti_reporter
 bundle
 rails db:create
 rails db:migrate
