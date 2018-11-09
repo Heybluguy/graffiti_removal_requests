@@ -7,7 +7,7 @@
 
 ## Launch
 
-Heroku Link: [graffiti_removal_requests](https://graffitireporter.herokuapp.com/)
+Heroku Link: [graffiti_reporter](https://graffitireporter.herokuapp.com/)
 
 To launch locally, run the following commands in your terminal:
 
