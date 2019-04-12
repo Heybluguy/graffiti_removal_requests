@@ -1,20 +1,82 @@
-<div class="header-container-wrapper">
-  <div class="home-link">
-    <%= link_to "Home", root_path %>
+<header class="page-header header container-fluid">
+  <div class="overlay"></div>
+  <div class="description">
+    <h1>Graffiti Removal Services</h1>
+    <p>
+      Graffiti is vandalism. It scars the community, hurts property values and diminishes
+      our quality of life. The Chicago Department of Streets and Sanitation offers free graffiti
+      removal services to private property owners to help maintain the beauty of our communities.
+      To report graffiti or request its removal, call the city's service request line at 3-1-1.
+    </p>
+    <button class="btn btn-outline-secondary btn-lg">Tell Me More!</button>
   </div>
-  <h3> Graffiti Removal Service Requests </h3>
-</div>
-<div class="form-wrapper">
-  <h3>Enter in an Alderman's last name along with month and year below to view their graffiti report information.</h3>
-  <div class="form-container">
-    <%= form_tag("/search", method: "get") do %>
-      <h3>Alderman Last Name: </h3>
-      <%= text_field_tag(:q, nil, placeholder: "last name", required: true, class: 'input__search-bar alderman') %>
+</header>
 
-      <h3>Month and Year: </h3>
-      <%= select_month Date.today %>
-      <%= select_year Date.today, start_year: 50.years.ago.year, end_year: Date.today.year %>
+<div class="container features ">
+  <div class="row mb-4">
+    <div class="col-lg-3 col-md-3 col-sm-12">
+      <h3 class="feature-title">Service Reports</h3>
+      <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/1015937118,width=178,height=178,version=-283705593/city-of-chicago-flag-star.png" class="img-fluid mx-auto d-block">
+      <p>Enter your Alderman's last name along with month and year to get their graffiti removal report history.</p>
+      <%= form_tag("/search", method: "get") do %>
+        <%= text_field_tag(:q, nil, placeholder: "Alderman's Last Name", required: true, class: 'form-control mt-4 mb-4') %>
+        <div class= "offset-md-2 mt-3">
+          <%= select_month Date.today %>
+          <%= select_year Date.today, start_year: 50.years.ago.year, end_year: Date.today.year %>
+        </div>
+        <%= submit_tag("Search", class: 'btn btn-secondary btn-block mt-3') %>
+      <% end %>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12">
+      <h3 class="feature-title ">How Its Done</h3>
+      <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/1015937118,width=178,height=178,version=-283705593/city-of-chicago-flag-star.png" class="img-fluid mx-auto d-block">
+      <p>The Graffiti Removal Program employs "blast" trucks that use baking soda under high water pressure to remove painted graffiti from brick, stone and other mineral surfaces. The program also deploys paint trucks to cover graffiti on surfaces such as metal or wood.</p>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12">
+      <h3 class="feature-title">Chicago Police</h3>
+      <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/1015937118,width=178,height=178,version=-283705593/city-of-chicago-flag-star.png" class="img-fluid mx-auto d-block">
+      <p>The Department of Street and Sanitation also works very closely with the Chicago Police Department who will apprehend graffiti vandals caught defacing property. Parents or guardians may be liable for monetary damages, if a minor in the same household commits any type of vandalism, including graffiti.</p>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12">
+      <h3 class="feature-title">Get in Touch</h3>
+      <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/1015937118,width=178,height=178,version=-283705593/city-of-chicago-flag-star.png" class="img-fluid mx-auto d-block">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Name" name="">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address" name="email">
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="4"></textarea>
+      </div>
+      <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+    </div>
   </div>
 </div>
-    <%= submit_tag("Search", class: 'button__search-bar') %>
-  <% end %>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <p>1640 Riverside Drive, Hill Valley, California
+        <br/>info@mywebsite.com
+        <br/>+ 01 234 567 88
+        <br/>+ 01 234 567 89</p>
+      </div>
+    </div>
+  </div>
+    <div class="footer-copyright text-center">© 2019 Copyright: MyWebsite.com</div>
+</footer>
+
+
+
+
+
+
+<script src="main.js"></script>
