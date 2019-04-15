@@ -1,18 +1,14 @@
-<div class="header-container-wrapper">
-  <div class="home-link">
-    <%= link_to "Home", root_path %>
+<header class="page-header header container-fluid">
+  <div class="overlay"></div>
+  <div class="description">
+    <h1> Graffiti Removal Service Requests </h1>
+      <% if @alderman %>
+        <p> During: <%= Date::MONTHNAMES[@month.to_i] %> of <%= @year %></p>
+        <p> Number of Service Requests: <%= @service_requests.count %> </p>
+        <p> Alderman: <%= @alderman.name %> </p>
+        <p> Ward: #<%= @alderman.ward %> </p>
+      <% else %>
+        <p> An alderman wasn't found by that name. <p>
+      <% end %>
   </div>
-  <h3> Graffiti Removal Service Requests </h3>
-</div>
-<div class="search-results-wrapper">
-  <div class="results-container">
-    <% if @alderman %>
-      <h3> Name: <%= @alderman.name %> </h3>
-      <h3> Ward: <%= @alderman.ward %> </h3>
-      <h3> Number of Service Requests: <%= @service_requests.count %> </h3>
-      <h3> Month: <%= Date::MONTHNAMES[@month.to_i] %> of <%= @year %></h3>
-    <% else %>
-      <h3> An alderman wasn't found by that name. <h3>
-    <% end %>
-  </div>
-</div>
+</header>
